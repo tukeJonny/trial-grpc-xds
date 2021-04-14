@@ -1,2 +1,7 @@
 # trial-grpc-xds
-Trial gRPC proxyless xDS APIs
+Trial gRPC xDS APIs with envoyproxy.
+
+## Requirements
+
+* protoc
+* protoc-gen-go

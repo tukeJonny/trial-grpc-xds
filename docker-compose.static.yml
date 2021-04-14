@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  envoy:
+    image: envoyproxy/envoy-dev:db7b43a0dd63cee0e898268830b17b8938cff5f9
+    command: envoy -c /etc/envoy.yaml
+    volumes:
+      - "./envoy/envoy-static.yaml:/etc/envoy.yaml:ro"
+    ports:
+      - "9000:9000"
+      - "8000:8000"
+
+  nginx1:
+    build: ./nginx
+    ports:
+      - "8001:80"
+
+  nginx2:
+    build: ./nginx
+    ports:
+      - "8002:80"
