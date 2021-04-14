@@ -1,0 +1,17 @@
+syntax = "proto3";
+package pb;
+
+option go_package = ".;pb";
+
+service PingService {
+    rpc Ping(PingRequest) returns (PingResponse) {}
+    rpc PingStream(PingRequest) returns (stream PingResponse) {}
+}
+
+message PingRequest {
+    string id = 1;
+}
+
+message PingResponse {
+    string msg = 1;
+}

@@ -9,4 +9,12 @@ services:
       - "9000:9000"
       - "8000:8000"
 
+  xdsserver:
+    build: ./cmd/xdsserver
+    ports:
+      - "12345:12345"
 
+  server:
+    build: ./cmd/server
+    ports:
+      - "8080:8080"

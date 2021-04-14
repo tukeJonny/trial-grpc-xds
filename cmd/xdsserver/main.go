@@ -21,7 +21,7 @@ import (
 )
 
 var (
-	port = flag.String("port", "8080", "xdsサーバのリッスンするポート")
+	port = flag.String("port", "12345", "xdsサーバのリッスンするポート")
 )
 
 const (
